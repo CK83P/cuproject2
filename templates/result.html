@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Результаты погоды</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 2em;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0056b3;
+        }
+
+        h2 {
+            margin-top: 1.5em;
+            color: #333;
+        }
+
+        p {
+            margin: 0.5em 0;
+            line-height: 1.5;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 2em;
+            padding: 0.5em 1em;
+            text-decoration: none;
+            background-color: #0056b3;
+            color: #fff;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        a:hover {
+            background-color: #003f8a;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Результаты погоды</h1>
+
+    <h2>Начальная точка: {{ start_city }}</h2>
+    <p>Температура: {{ start_temperature }} °C</p>
+    <p>Скорость ветра: {{ start_wind_speed }} км/ч</p>
+    <p>Вероятность осадков: {{ start_precipitation_probability }}%</p>
+    <p>Погодные условия: {{ start_weather_condition }}</p>
+
+    <h2>Конечная точка: {{ end_city }}</h2>
+    <p>Температура: {{ end_temperature }} °C</p>
+    <p>Скорость ветра: {{ end_wind_speed }} км/ч</p>
+    <p>Вероятность осадков: {{ end_precipitation_probability }}%</p>
+    <p>Погодные условия: {{ end_weather_condition }}</p>
+
+    <a href="/">Назад</a>
+</body>
+
+</html>
